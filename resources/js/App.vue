@@ -8,7 +8,6 @@
                 </span>
             </template>
         </template>
-
         <template #bodyCell="{ column, record }">
             <template v-if="column.key === 'name'">
                 <a>
@@ -21,18 +20,6 @@
                         :color="tag === 'loser' ? 'volcano' : tag.length > 5 ? 'geekblue' : 'green'">
                         {{ tag.toUpperCase() }}
                     </a-tag>
-                </span>
-            </template>
-            <template v-else-if="column.key === 'action'">
-                <span>
-                    <a>Invite 一 {{ record.name }}</a>
-                    <a-divider type="vertical" />
-                    <a>Delete</a>
-                    <a-divider type="vertical" />
-                    <a class="ant-dropdown-link">
-                        More actions
-                        <down-outlined />
-                    </a>
                 </span>
             </template>
         </template>
